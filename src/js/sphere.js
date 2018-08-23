@@ -26,9 +26,10 @@ function Sphere({fragmentShader, vertexShader}) {
 
   const material = new THREE.ShaderMaterial( {
     uniforms: {
-      time: { value: 0.0 },
+      time: { value: 1.0 },
       texture: { value: new THREE.CanvasTexture(CircleTexture(textureAttr)) },
-      resolution: { value: new THREE.Vector2() }
+      resolution: { value: new THREE.Vector2() },
+      u_time: {type: "f", value: 0}
     },
     fragmentShader,
     vertexShader,

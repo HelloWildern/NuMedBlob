@@ -19,12 +19,15 @@ void main() {
   float r = .8 - 1. * noise;
   float g = 0.0;
   float b = 0.1 - 0.3 * noise;
-  vec3 foo = vec3(r*2.0, g, b*0.5);
+  //vec3 foo = vec3(r*2.0, g, b*0.5);
+  vec3 foo = vec3(0.77, 0.0, 0.14);
 
-gl_FragColor = vec4( foo, 1.0 );
-  // gl_FragColor = vec4( foo, 1.0 ) * texture2D( texture, vec2(pos.x, pos.y) );
-  // gl_FragColor = vec4( foo, 1.0 ) * texture2D( texture, vec2(vUv.x, vUv.y / 2.0) );
-  //gl_FragColor = vec4( foo, 1.0 ) * texture2D( texture, gl_PointCoord );
+  //gl_FragColor = vec4( foo, 1.0 );
+  //gl_FragColor = vec4( foo, 1.0 ) * texture2D( texture, vec2(pos.x, pos.y) );
+  //gl_FragColor = vec4( foo, 1.0 ) * texture2D( texture, vec2(vUv.x, vUv.y / 2.0) );
+
+  //Final
+  gl_FragColor = vec4( foo, 1.0 ) * texture2D( texture, gl_PointCoord );
 
   if ( gl_FragColor.a < ALPHATEST ) discard;
 
