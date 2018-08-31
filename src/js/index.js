@@ -14,9 +14,9 @@ const containerEl = document.getElementsByClassName('blobWrapper')[0];
 const renderer = Renderer({containerEl});
 const { scene, camera } = Scene({
   // cameraPos: [10, 0, 0],
-  cameraPos: [70, 0, 0],
+  cameraPos: [80, 0, 0],
   cameraAspect: containerEl.offsetWidth / containerEl.offsetHeight,
-  cameraFov: 45
+  cameraFov: 40
 });
 
 const controls = new THREE.OrbitControls(camera);

@@ -19,4 +19,6 @@ void main() {
     color = mix(colorA, colorB, pct);
 
     gl_FragColor = vec4(color, 1.0 ) * texture2D( texture, gl_PointCoord );
+
+    if ( gl_FragColor.a < ALPHATEST ) discard;
 }
